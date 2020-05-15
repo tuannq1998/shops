@@ -231,6 +231,16 @@
                         <i class="fa fa-edit"></i> <span>Category</span>
                     </a>
                 </li>
+                <li class="">
+                    <a href="{{route('admin.keyword.index')}}">
+                        <i class="fa fa-key"></i> <span>Keyword</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="{{route('admin.product.index')}}">
+                        <i class="fa fa-key"></i> <span>Product</span>
+                    </a>
+                </li>
 
                 <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
                 <li class="header">LABELS</li>

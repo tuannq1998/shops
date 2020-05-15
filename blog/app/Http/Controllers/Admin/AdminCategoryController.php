@@ -35,6 +35,7 @@ class AdminCategoryController extends Controller
         ]);
         return redirect()->back();
     }
+
     public function edit($id)
     {
         $category = Category::findOrFail($id);
@@ -48,43 +49,32 @@ class AdminCategoryController extends Controller
             'name' => $request->name,
             'slug' => \Str::slug($request->name),
             'icon' => $request->icon,
-            'title_seo' => $request->title_seo ? $request->title_seo : $request->name,
-            'desc_seo' => $request->desc_seo ? $request->desc_seo : $request->name,
+            'title_seo' => $request->title_seo,
+            'desc_seo' => $request->desc_seo,
         ]);
 
         return redirect()->back();
     }
-    public function destroy($action, $id)
+
+    public function destroy($id)
     {
-        if($action)
-        {
-            $category = Category::findOrFail($id);
-            switch ($action){
-                case 'delete':
-                    $category->delete();
-                    break;
-            }
-        }
+        Category::findOrFail($id)->delete();
+
         return redirect()->back();
     }
-//    public function active($id)
-//    {
-//        $category = Category::find($id);
-//        $category->active = ! $category->active;
-//        $category->save();
-//        return redirect()->back();
-//    }
+
     public function active($id)
     {
         $category = Category::find($id);
-        $category->active = ! $category->active;
+        $category->active = !$category->active;
         $category->save();
         return redirect()->back();
     }
+
     public function hot($id)
     {
         $category = Category::find($id);
-        $category->hot = ! $category->hot;
+        $category->hot = !$category->hot;
         $category->save();
         return redirect()->back();
     }
