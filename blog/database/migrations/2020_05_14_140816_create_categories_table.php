@@ -16,7 +16,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
-            $table->string('slug')->index();
+            $table->string('slug')->unique()->index();
             $table->char('icon')->nullable();
             $table->string('avatar')->nullable();
             $table->integer('total_product')->default(0);
@@ -25,6 +25,7 @@ class CreateCategoriesTable extends Migration
             $table->tinyInteger('hot')->default(0);
             $table->string('title_seo')->nullable();
             $table->string('desc_seo')->nullable();
+            $table->string('banner')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

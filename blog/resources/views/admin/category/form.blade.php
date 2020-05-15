@@ -35,6 +35,9 @@
     </div>
     <div class="col-sm-4"></div>
     <div class="col-sm-12">
-    <button type="submit" class="btn btn-primary float-right">Lưu</button>
+        <div class="box-footer text-center" style="margin-top: 20px">
+            <a href="{{route('admin.category.index')}}" class="btn btn-primary">Quay lại <i class="fa fa-undo"></i></a>
+            <button type="submit" class="btn btn-success">Lưu <i class="fa fa-save"></i></button>
+        </div>
     </div>
 </form>
