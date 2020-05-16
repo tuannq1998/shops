@@ -9,7 +9,7 @@
     </nav>
     <!-- Page Heading -->
     <div class="container">
-        @include('admin.category.form')
+        @include('admin.keyword.form')
     </div>
 
 @stop

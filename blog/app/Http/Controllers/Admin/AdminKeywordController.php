@@ -55,9 +55,9 @@ class AdminKeywordController extends Controller
     }
     public function hot($id)
     {
-        $category = Keyword::find($id);
-        $category->hot = !$category->hot;
-        $category->save();
+        $keyword = Keyword::find($id);
+        $keyword->hot = !$keyword->hot;
+        $keyword->save();
         return redirect()->back();
     }
 }

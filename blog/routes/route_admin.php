@@ -40,6 +40,7 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
         Route::get('update/{id}', 'AdminProductController@edit')->name('admin.product.update');
         Route::post('update/{id}', 'AdminProductController@update');
 
+        Route::get('active/{id}', 'AdminProductController@active')->name('admin.product.active');
         Route::get('hot/{id}', 'AdminProductController@hot')->name('admin.product.hot');
         Route::get('delete/{id}', 'AdminProductController@destroy')->name('admin.product.delete');
 

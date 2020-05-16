@@ -1,15 +1,17 @@
 @extends('layouts.app_master_admin')
 @section('content')
-    <nav aria-label="breadcrumb">
+    <section class="content-header">
+        <h1>Cập nhật sản phẩm</h1>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="">Trang chủ</a></li>
-            <li class="breadcrumb-item"><a href="">Danh mục</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Cập nhật</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="{{  route('admin.product.index') }}"> Product</a></li>
+            <li class="active">Update</li>
         </ol>
-    </nav>
+    </section>
     <!-- Page Heading -->
-    <div class="container">
-        @include('admin.category.form')
-    </div>
-
+    <section class="content">
+        <div class="row">
+            @include('admin.product.form')
+        </div>
+    </section>
 @stop

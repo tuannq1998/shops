@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Fontend;
+namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class FontendController extends Controller
+class ProductController extends Controller
 {
     //
 }

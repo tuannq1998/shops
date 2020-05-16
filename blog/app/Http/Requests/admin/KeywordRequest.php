@@ -24,7 +24,7 @@ class KeywordRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|unique:categories,name,'.$this->id,
+            'name'=>'required|unique:keywords,name,'.$this->id,
         ];
     }
 }
