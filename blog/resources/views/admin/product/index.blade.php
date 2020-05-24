@@ -5,7 +5,7 @@
         <h1>Quản lý sản phẩm</h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="{{  route('admin.product.index') }}"> Keyword</a></li>
+            <li><a href="{{  route('admin.product.index') }}"> Product</a></li>
             <li class="active"><a> List</a></li>
         </ol>
     </section>

@@ -45,4 +45,17 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
         Route::get('delete/{id}', 'AdminProductController@destroy')->name('admin.product.delete');
 
     });
+    Route::group(['prefix' => 'article'], function () {
+        Route::get('', 'ArticleController@index')->name('admin.article.index');
+        Route::get('create', 'ArticleController@create')->name('admin.article.create');
+        Route::post('create', 'ArticleController@store');
+
+        Route::get('update/{id}', 'ArticleController@edit')->name('admin.article.update');
+        Route::post('update/{id}', 'ArticleController@update');
+
+        Route::get('active/{id}', 'ArticleController@active')->name('admin.article.active');
+        Route::get('hot/{id}', 'ArticleController@hot')->name('admin.article.hot');
+        Route::get('delete/{id}', 'ArticleController@destroy')->name('admin.article.delete');
+
+    });
 });

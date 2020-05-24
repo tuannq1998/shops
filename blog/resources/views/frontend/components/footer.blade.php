@@ -1,94 +1,204 @@
-<div id="footer">
-    <div class="wImage background" style="background-image: linear-gradient(#2d1b0c,#1d0e05);">
-        <a href="javascript://" title="" class="image cover"></a>
-    </div>
-    <div class="wrp">
-        <div class="left">
-            <div class="top">
-                <div class="item">
-                    <div class="title"><a href="javascript://" class="dn dbmobile openFoot"><i class="far fa-plus-square"></i></a> THÔNG TIN CHUNG</div>
-                    <ul>
-                        <li><a href="/tin-tuc/226/Dang-Quang-Watch-nha-nhap-khau-dong-ho-chinh-hang-Thuy-Sy.html" title="Giới thiệu">Giới thiệu chung</a></li>
-                        <li><a href="https://www.facebook.com/tuyendungdangquang/" title="Tuyển dụng">Kênh tuyển dụng</a></li>
-                        <li><a href="/tin-tuc-dong-ho.html" title="Tin tức">Tin tức - Sự kiện</a></li>
-                        <li><a href="/he-thong-cua-hang/" title="Cửa hàng">Hệ thống cửa hàng</a></li>
-                        <li><a href="https://www.facebook.com/groups/269522113844965/" title="">Cộng đồng khách hàng</a></li>
-                    </ul>
+<!-- FOOTER START -->
+<footer>
+    <!-- top footer area start -->
+    <div class="top-footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>Company info</h4>
+                        </div>
+                        <div class="cakewalk-footer-content">
+                            <p class="footer-des">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim adm.</p>
+                            <a href="#" class="read-more">Read more</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                    <div class="title"><a href="javascript://" class="dn dbmobile openFoot"><i class="far fa-plus-square"></i></a> HỖ TRỢ KHÁCH HÀNG</div>
-                    <ul>
-                        <li><a href="https://www.dangquangwatch.vn/chinh-sach-chung/2/1.-Chinh-sach-bao-hanh.html" title="1. Chính sách bảo hành">1. Chính sách bảo hành</a></li>
-                        <li><a href="https://www.dangquangwatch.vn/chinh-sach-chung/4/2.-Chinh-sach-doi-hang.html" title="2. Chính sách đổi hàng">2. Chính sách đổi hàng</a></li>
-                        <li><a href="https://www.dangquangwatch.vn/chinh-sach-chung/5/3.-Chinh-sach-bao-mat.html" title="3. Chính sách bảo mật">3. Chính sách bảo mật</a></li>
-                        <li><a href="https://www.dangquangwatch.vn/chinh-sach-chung/6/4.-Chinh-sach-van-chuyen.html" title="4. Chính sách vận chuyển">4. Chính sách vận chuyển</a></li>
-                        <li><a href="https://www.dangquangwatch.vn/chinh-sach-chung/7/5.-Huong-dan-thanh-toan.html" title="5. Hướng dẫn thanh toán">5. Hướng dẫn thanh toán</a></li>
-                        <li><a href="https://www.dangquangwatch.vn/chinh-sach-chung/8/6.-Huong-dan-mua-hang.html" title="6. Hướng dẫn mua hàng">6. Hướng dẫn mua hàng</a></li>
-                    </ul>
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>Information</h4>
+                        </div>
+                        <div class="cakewalk-footer-content">
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                    <div class="title"><a href="javascript://" class="dn dbmobile openFoot"><i class="far fa-plus-square"></i></a> HƯỚNG DẪN & TƯ VẤN</div>
-                    <ul>
-                        <li><a href="/tin-tuc/c-461/Goc-Hoi-dap.html" title="">Góc Hỏi đáp</a></li>
-                        <li><a href="javascript://" title="">Chứng nhận thương hiệu</a></li>
-                        <li><a href="/tin-tuc-dong-ho.html" title="Tin tức">Tin tức - Sự kiện</a></li>
-                        <li><a href="/he-thong-cua-hang/" title="Hệ thống cửa hàng">Hệ thống cửa hàng</a></li>
-                        <li><a href="/tin-tuc/c-465/Bao-chi-viet-ve-Dang-Quang.html" title="Báo chí">Báo chí viết về Đăng Quang</a></li>
-                    </ul>
+                <div class="col-md-2 col-sm-4">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>Fashion Tags</h4>
+                        </div>
+                        <div class="cakewalk-footer-content">
+                            <ul>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">My Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Checkout</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="bot">
-                <div class="plug">
-                    <div class="title">KẾT NỐI VỚI CHÚNG TÔI</div>
-                    <ul>
-                        <li><a href="https://www.facebook.com/donghodangquang/" title=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="javascript://" title=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.youtube.com/dangquangtv" title=""><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="javascript://" title=""><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="javascript://" title=""><i class="fab fa-google-plus-g"></i></a></li>
-                    </ul>
+                <div class="col-md-2 hidden-sm">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>Fashion Tags</h4>
+                        </div>
+                        <div class="cakewalk-footer-content">
+                            <ul>
+                                <li><a href="#">Sitemap</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Advanced Search</a></li>
+                                <li><a href="#">Affiliates</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <a href="#" title="">
-                    <img data-src="/view/Css/icon/ico10.png" class="lazyload" alt="Dang Quang Watch" src="/view/Css/icon/thumnail.jpg"/>
-                </a>
-                <a href="#" title="">
-                    <img data-src="/view/Css/icon/ico11.png" class="lazyload" alt="Dang Quang Watch" src="/view/Css/icon/thumnail.jpg"/>
-                </a>
-            </div>
-        </div>
-        <div class="mid">
-            <div class="title">Hệ thống cửa hàng</div>
-            <div class="wImage htch">
-                <a href="/he-thong-cua-hang/" title="Hệ thống cửa hàng" class="image cover">
-                    <img data-src="/view/Pic/cua-hang-dang-quang.jpg" class="lazyload" alt="Dang Quang Watch" src="/view/Css/icon/thumnail.jpg"/>
-                </a>
-                <p class="name">Tìm ngay cửa hàng gần bạn</p>
-            </div>
-            <a href="/he-thong-cua-hang/" title="" class="more">Xem tất cả hệ thống cửa hàng</a>
-        </div>
-        <div class="right">
-            <div class="title">Fanpage của chúng tôi</div>
-            <div class="wImage htch">
-                <a href="https://www.facebook.com/donghodangquang/" title="" target="_blank" class="image cover">
-                    <img data-src="/view/Css/icon/facebook-fanpage-donghodangquang.jpg" class="lazyload" alt="Dang Quang Watch" src="/view/Css/icon/thumnail.jpg"/>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="commonBot">
-    <div class="wrp">
-        <a href="/" title="" class="logo">
-            <img data-src="/view/Css/icon/Logo.png" class="lazyload" alt="Dang Quang Watch" src="/view/Css/icon/thumnail.jpg"/>
-        </a>
-        <div class="right">
-            <a href="#" title="" class="title">CÔNG TY CỔ PHẦN TRỰC TUYẾN ĐĂNG QUANG</a>
-            <div class="lh24 tac">
-                <p>
-                    VPGD: Số 55 Trần Đăng Ninh – Cầu Giấy – TP. Hà Nội - Email: sieuthidangquang@gmail.com
-                </p>
-                <p>Giấy CNĐKKD và MSDN số: 0104938104 đăng ký lần đầu do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày 07/10/2010</p>
+                <div class="col-md-2 hidden-sm">
+                    <div class="single-snap-footer">
+                        <div class="snap-footer-title">
+                            <h4>Follow Us</h4>
+                        </div>
+                        <div class="cakewalk-footer-content social-footer">
+                            <ul>
+                                <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a><span> Facebook</span></li>
+                                <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a><span> Google Plus</span></li>
+                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a><span> Twitter</span></li>
+                                <li><a href="https://youtube.com/" target="_blank"><i class="fa fa-youtube-play"></i></a><span> Youtube</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- top footer area end -->
+    <!-- info footer start -->
+    <div class="info-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="info-fcontainer">
+                        <div class="infof-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="infof-content">
+                            <h3>Our Address</h3>
+                            <p>Main Street, Banasree, Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="info-fcontainer">
+                        <div class="infof-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="infof-content">
+                            <h3>Phone Support</h3>
+                            <p>+88 0173 7803547</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="info-fcontainer">
+                        <div class="infof-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="infof-content">
+                            <h3>Email Support</h3>
+                            <p>admin@bootexperts.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="info-fcontainer">
+                        <div class="infof-icon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <div class="infof-content">
+                            <h3>Openning Hour</h3>
+                            <p>Sat - Thu : 9:00 am - 22:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- info footer end -->
+    <!-- banner footer area start -->
+    <div class="banner-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-xs-3 nopadding">
+                    <div class="single-bannerfooter">
+                        <a href="#">
+                            <img src="{{asset('frontend/img/banner/footer-1.jpg')}}" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-3 nopadding">
+                    <div class="single-bannerfooter">
+                        <a href="#">
+                            <img src="{{asset('frontend/img/banner/footer-2.jpg')}}" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-3 nopadding">
+                    <div class="single-bannerfooter">
+                        <a href="#">
+                            <img src="{{asset('frontend/img/banner/footer-3.jpg')}}" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-3 nopadding">
+                    <div class="single-bannerfooter">
+                        <a href="#">
+                            <img src="{{asset('frontend/img/banner/footer-4.jpg')}}" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 hidden-xs nopadding">
+                    <div class="single-bannerfooter">
+                        <a href="#">
+                            <img src="{{asset('frontend/img/banner/footer-5.jpg')}}" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 hidden-xs nopadding">
+                    <div class="single-bannerfooter last-single">
+                        <a href="#">
+                            <img src="{{asset('frontend/img/banner/footer-6.jpg')}}" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner footer area end -->
+    <!-- footer address area start -->
+    <div class="address-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <address>Copyright © <a href="http://bootexperts.com/">BootExperts.</a> All Rights Reserved</address>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="footer-payment pull-right">
+                        <a href="#"><img src="{{asset('frontend/img/payment.png')}}" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer address area end -->
+</footer>
+<!-- FOOTER END -->

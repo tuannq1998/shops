@@ -241,6 +241,11 @@
                         <i class="fa fa-key"></i> <span>Product</span>
                     </a>
                 </li>
+                <li class="">
+                    <a href="{{route('admin.article.index')}}">
+                        <i class="fa fa-key"></i> <span>Tin tức</span>
+                    </a>
+                </li>
 
                 <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
                 <li class="header">LABELS</li>
