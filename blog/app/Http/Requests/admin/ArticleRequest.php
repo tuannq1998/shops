@@ -24,8 +24,7 @@ class ArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|max:190|min:3|unique:article,name,'.$this->id,
-            'price'=>'required',
+            'name'=>'required|max:190|min:3|unique:articles,name,'.$this->id,
             'description'=>'required',
             'contents'=>'required',
         ];

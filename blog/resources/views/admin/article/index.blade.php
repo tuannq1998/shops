@@ -24,10 +24,12 @@
                         <thead>
                         <tr>
                             <td>#</td>
-                            <td>Tên bài viết</td>
-                            <td>Mô tả</td>
+                            <td width="20%">Tên bài viết</td>
+                            <td style="width: 100px;">Ảnh</td>
+                            <td style="width: 500px">Mô tả</td>
                             <td>Trạng thái</td>
                             <td>Ngày tạo</td>
+                            <td>Thao tác</td>
                             <td></td>
                         </tr>
                         </thead>
@@ -37,6 +39,7 @@
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$article->name}}</td>
+                                    <td><img style="width: 100px; height: 80px" src="{{pare_url_file($article->avatar)}}" alt=""></td>
                                     <td>{{$article->description}}</td>
                                     <td>
                                         @if($article->a_active == \App\Models\Article::STATUS_Public)
