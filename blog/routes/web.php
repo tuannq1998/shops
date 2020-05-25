@@ -17,5 +17,6 @@
 Route::group(['namespace' => 'Frontend'], function (){
     Route::get('','HomeController@index')->name('get.home');
     Route::get('danh-muc/{slug}-{id}','CategoryController@listProduct')->name('frontend.list.product');
+    Route::get('san-pham/{slug}-{id}','ProductDetailController@ProductDetail')->name('frontend.product.detail');
 });
 include 'route_admin.php';
