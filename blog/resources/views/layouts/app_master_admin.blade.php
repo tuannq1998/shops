@@ -226,24 +226,34 @@
                         <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
                     </ul>
                 </li>
-                <li class="">
+                <li class="{{ \Request::route()->getName() == 'admin.category.index' ? 'active':'' }}">
                     <a href="{{route('admin.category.index')}}">
                         <i class="fa fa-edit"></i> <span>Category</span>
                     </a>
                 </li>
-                <li class="">
+                <li class="{{ \Request::route()->getName() == 'admin.keyword.index' ? 'active':'' }}">
                     <a href="{{route('admin.keyword.index')}}">
                         <i class="fa fa-key"></i> <span>Keyword</span>
                     </a>
                 </li>
-                <li class="">
+                <li class="{{ \Request::route()->getName() == 'admin.product.index' ? 'active':'' }}">
                     <a href="{{route('admin.product.index')}}">
                         <i class="fa fa-key"></i> <span>Product</span>
                     </a>
                 </li>
-                <li class="">
+                <li class="{{ \Request::route()->getName() == 'admin.article.index' ? 'active':'' }}">
                     <a href="{{route('admin.article.index')}}">
                         <i class="fa fa-key"></i> <span>Tin tức</span>
+                    </a>
+                </li>
+                <li class="{{ \Request::route()->getName() == 'admin.transaction.index' ? 'active':'' }}">
+                    <a href="{{route('admin.transaction.index')}}">
+                        <i class="fa fa-key"></i> <span>Đơn hàng</span>
+                    </a>
+                </li>
+                <li class="{{ \Request::route()->getName() == 'admin.user.index' ? 'active':'' }}">
+                    <a href="{{route('admin.user.index')}}">
+                        <i class="fa fa-key"></i> <span>Thành viên</span>
                     </a>
                 </li>
 
