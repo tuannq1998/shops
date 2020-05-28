@@ -20,6 +20,7 @@ Route::group(['namespace' => 'Frontend'], function (){
     Route::get('san-pham/{slug}-{id}','ProductDetailController@ProductDetail')->name('frontend.product.detail');
     Route::prefix('shopping')->group(function (){
        Route::get('/add/{id}','ShoppingCartController@addProduct')->name('add.shopping.cart');
+       Route::get('/danh-sach','ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
     });
 });
 include 'route_admin.php';
