@@ -27,4 +27,9 @@ class ShoppingCartController extends Controller
         $products = \Cart::content();
         return view('frontend.pages.shopping_cart.index', compact('products'));
     }
+
+    public function formPay()
+    {
+        return view('frontend.pages.shopping_cart.pay');
+    }
 }

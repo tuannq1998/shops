@@ -22,5 +22,10 @@ Route::group(['namespace' => 'Frontend'], function (){
        Route::get('/add/{id}','ShoppingCartController@addProduct')->name('add.shopping.cart');
        Route::get('/danh-sach','ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
     });
+    Route::group(['prefix'=>'gio-hang', 'middleware'=>'web'], function (){
+        Route::get('/thanh-toan','ShoppingCartController@formPay')->name('form.pay');
+    });
+    Route::get('lien-he', 'ContactController@getContact')->name('get.contact');
+    Route::post('lien-he', 'ContactController@saveContact');
 });
 include 'route_admin.php';

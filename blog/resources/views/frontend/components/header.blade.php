@@ -26,7 +26,7 @@
                             </li>
                             <li class="expand"><a href="index.html">Tin tức</a></li>
                             <li class="expand"><a href="index.html">Giới thiệu</a></li>
-                            <li class="expand"><a href="index.html">Liên hệ</a></li>
+                            <li class="expand"><a href="{{route('get.contact')}}">Liên hệ</a></li>
                             {{--                            <li class="expand"><a href="#">Pages</a>--}}
                             {{--                                <ul class="restrain sub-menu">--}}
                             {{--                                    <li><a href="about-us.html">About Us</a></li>--}}
