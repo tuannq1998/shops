@@ -19,7 +19,9 @@
                                 <ul class="restrain sub-menu">
                                     @if(isset($categories))
                                         @foreach($categories as $cate)
-                                            <li><a href="{{route('frontend.list.product', [$cate->slug, $cate->id])}}">{{$cate->name}}</a></li>
+                                            <li>
+                                                <a href="{{route('frontend.list.product', [$cate->slug, $cate->id])}}">{{$cate->name}}</a>
+                                            </li>
                                         @endforeach
                                     @endif
                                 </ul>
@@ -208,7 +210,8 @@
                             <div class="shopping-carts text-right">
                                 <div class="cart-toggler">
                                     <a href="{{route('list.shopping.cart')}}"><i class="icon-bag"></i></a>
-                                    <a href="{{route('list.shopping.cart')}}"><span class="cart-quantity">{{\Cart::count()}}</span></a>
+                                    <a href="{{route('list.shopping.cart')}}"><span
+                                            class="cart-quantity">{{\Cart::count()}}</span></a>
                                 </div>
                                 <div class="restrain small-cart-content">
                                     <ul class="cart-list">
@@ -274,11 +277,16 @@
                     <div class="disflow">
                         <div class="expand dropps-menu">
                             <a href="#"><i class="fa fa-align-right"></i></a>
-                            <ul class="restrain language">
-                                <li><a href="login.html">Quản lý</a></li>
-                                <li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
-                                <li><a href="cart.html">Giỏ hàng</a></li>
-                                <li><a href="login.html">Thoát</a></li>
+                            <ul class="restrain language" style="width: 200px">
+                                @if(Auth::check())
+                                    <li><a href="login.html">Quản lý</a></li>
+                                    <li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
+                                    <li><a href="cart.html">Giỏ hàng</a></li>
+                                    <li><a href="{{route('get.Logout')}}">Thoát</a></li>
+                                @else
+                                    <li><a href="{{route('get.register')}}">Đăng ký</a></li>
+                                    <li><a href="{{route('get.login')}}">Đăng nhập</a></li>
+                                @endif
                             </ul>
                         </div>
                     </div>

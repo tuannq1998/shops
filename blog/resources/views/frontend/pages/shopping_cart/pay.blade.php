@@ -29,76 +29,38 @@
                         <!--REVIEW ORDER-->
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                Thông tin thanh toán
-                                <div class="pull-right"><small><a class="afix-1" href="#">Edit Cart</a></small></div>
+                                Danh sách sản phẩm
+                                <div class="pull-right"><small><a class="afix-1" href="{{route('list.shopping.cart')}}">Cập
+                                            nhật</a></small></div>
                             </div>
                             <div class="panel-body">
-                                <div class="form-group">
-                                    <div class="col-sm-3 col-xs-3">
-                                        <img class="img-responsive"
-                                             src="//c1.staticflickr.com/1/466/19681864394_c332ae87df_t.jpg"/>
+                                @foreach($products as $product)
+                                    <div class="form-group">
+                                        <div class="col-sm-3 col-xs-3">
+                                            <img class="img-responsive" style="width: 100px; height: 70px"
+                                                 src="{{pare_url_file($product->options->avatar)}}" alt="">
+                                        </div>
+                                        <div class="col-sm-6 col-xs-6">
+                                            <div class="col-xs-12">{{$product->name}}</div>
+                                            <div class="col-xs-12"><small>Số lượng x
+                                                    <span>{{$product->qty}}</span></small></div>
+                                        </div>
+                                        <div class="col-sm-3 col-xs-3 text-right">
+                                            <h6>{{ number_format($product->price,0,',','.')}} <span>VNĐ</span></h6>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6 col-xs-6">
-                                        <div class="col-xs-12">Product name</div>
-                                        <div class="col-xs-12"><small>Quantity:<span>1</span></small></div>
+                                    <div class="form-group">
+                                        <hr/>
                                     </div>
-                                    <div class="col-sm-3 col-xs-3 text-right">
-                                        <h6><span>$</span>25.00</h6>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <hr/>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-3 col-xs-3">
-                                        <img class="img-responsive"
-                                             src="//c1.staticflickr.com/1/466/19681864394_c332ae87df_t.jpg"/>
-                                    </div>
-                                    <div class="col-sm-6 col-xs-6">
-                                        <div class="col-xs-12">Product name</div>
-                                        <div class="col-xs-12"><small>Quantity:<span>1</span></small></div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-3 text-right">
-                                        <h6><span>$</span>25.00</h6>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <hr/>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-3 col-xs-3">
-                                        <img class="img-responsive"
-                                             src="//c1.staticflickr.com/1/466/19681864394_c332ae87df_t.jpg"/>
-                                    </div>
-                                    <div class="col-sm-6 col-xs-6">
-                                        <div class="col-xs-12">Product name</div>
-                                        <div class="col-xs-12"><small>Quantity:<span>2</span></small></div>
-                                    </div>
-                                    <div class="col-sm-3 col-xs-3 text-right">
-                                        <h6><span>$</span>50.00</h6>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <hr/>
-                                </div>
+                                @endforeach
                                 <div class="form-group">
                                     <div class="col-xs-12">
-                                        <strong>Subtotal</strong>
-                                        <div class="pull-right"><span>$</span><span>200.00</span></div>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <small>Shipping</small>
-                                        <div class="pull-right"><span>-</span></div>
+                                        <strong>Tổng tiền</strong>
+                                        <div class="pull-right"><span>{{Cart::subtotal()}}</span> <span>VNĐ</span></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <hr/>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <strong>Order Total</strong>
-                                        <div class="pull-right"><span>$</span><span>150.00</span></div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,68 +69,46 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
                         <!--SHIPPING METHOD-->
                         <div class="panel panel-info">
-                            <div class="panel-heading">Address</div>
+                            <div class="panel-heading">Thông tin thanh toán</div>
                             <div class="panel-body">
                                 <div class="form-group">
+                                    <div class="col-md-12"><strong>Họ và tên:</strong></div>
                                     <div class="col-md-12">
-                                        <h4>Shipping Address</h4>
+                                        <input type="text" name="name" class="form-control" value="{{get_data_user('web','name')}}"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-12"><strong>Country:</strong></div>
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" name="country" value=""/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-6 col-xs-12">
-                                        <strong>First Name:</strong>
-                                        <input type="text" name="first_name" class="form-control" value=""/>
-                                    </div>
-                                    <div class="span1"></div>
-                                    <div class="col-md-6 col-xs-12">
-                                        <strong>Last Name:</strong>
-                                        <input type="text" name="last_name" class="form-control" value=""/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-12"><strong>Address:</strong></div>
+                                    <div class="col-md-12"><strong>Địa chỉ:</strong></div>
                                     <div class="col-md-12">
                                         <input type="text" name="address" class="form-control" value=""/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-12"><strong>City:</strong></div>
+                                    <div class="col-md-12"><strong>Email:</strong></div>
                                     <div class="col-md-12">
-                                        <input type="text" name="city" class="form-control" value=""/>
+                                        <input type="text" name="email" class="form-control" value="{{get_data_user('web','email')}}"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-12"><strong>State:</strong></div>
+                                    <div class="col-md-12"><strong>Số điện thoại:</strong></div>
                                     <div class="col-md-12">
-                                        <input type="text" name="state" class="form-control" value=""/>
+                                        <input type="text" name="phone" class="form-control" value="{{get_data_user('web','phone')}}"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-12"><strong>Zip / Postal Code:</strong></div>
+                                    <div class="col-md-12"><strong>Ghi chú:</strong></div>
                                     <div class="col-md-12">
-                                        <input type="text" name="zip_code" class="form-control" value=""/>
+                                        <textarea name="note" id="" cols="30" rows="4" class="form-control"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-md-12"><strong>Phone Number:</strong></div>
-                                    <div class="col-md-12"><input type="text" name="phone_number" class="form-control"
-                                                                  value=""/></div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-md-12"><strong>Email Address:</strong></div>
-                                    <div class="col-md-12"><input type="text" name="email_address" class="form-control"
-                                                                  value=""/></div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-success">Xác nhận thông tin</button>
+                                    </div>
                                 </div>
                             </div>
+                            <!--SHIPPING METHOD END-->
                         </div>
-                        <!--SHIPPING METHOD END-->
-                    </div>
 
                 </form>
             </div>

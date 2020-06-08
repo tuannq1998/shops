@@ -58,10 +58,11 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
         Route::get('delete/{id}', 'ArticleController@destroy')->name('admin.article.delete');
 
     });
+    //ql đơn hàng
     Route::group(['prefix' => 'transaction'], function () {
         Route::get('', 'TransactionController@index')->name('admin.transaction.index');
     });
-
+    //ql thành viên
     Route::group(['prefix' => 'user'], function () {
         Route::get('', 'UserController@index')->name('admin.user.index');
     });

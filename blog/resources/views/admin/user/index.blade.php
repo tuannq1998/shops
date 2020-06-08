@@ -19,16 +19,29 @@
                         <thead>
                         <tr>
                             <td>#</td>
-                            <td>Tên danh mục</td>
+                            <td>Tên</td>
                             <td>Ảnh</td>
-                            <td>Trạng thái</td>
-                            <td>Hot</td>
-                            <td>Ngày tạo</td>
+                            <td>Email</td>
+                            <td>Phone</td>
                             <td>Thao tác</td>
                         </tr>
                         </thead>
                         <tbody>
-
+                        @if(isset($users))
+                            @foreach($users as $user)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td><img style="width: 80px; height: 80px" src="{{pare_url_file($user->avatar)}}" alt=""></td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->phone}}</td>
+                                    <td>
+                                        <a href="{{route('admin.product.update',$user->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                                        <a href="{{route('admin.product.delete',$user->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
                         </tbody>
                     </table>
                 </div>

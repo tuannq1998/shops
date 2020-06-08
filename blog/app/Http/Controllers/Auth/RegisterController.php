@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Http\Requests\RegisterRequest;
 use App\User;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -40,10 +42,27 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function getFormRegister()
+    {
+        return view('auth.register');
+
+    }
+
+    public function postFormRegister(RegisterRequest $request)
+    {
+        $data = $request->except("_token");
+        $data['password'] = Hash::make($data['password']);
+        $data['created_at'] = $data['updated_at'] = Carbon::now();
+        $id = User::insertGetId($data);
+        if($id){
+            return redirect()->route('get.login');
+        }
+        return redirect()->back();
+    }
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -58,7 +77,7 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \App\User
      */
     protected function create(array $data)

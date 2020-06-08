@@ -228,7 +228,7 @@
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.category.index' ? 'active':'' }}">
                     <a href="{{route('admin.category.index')}}">
-                        <i class="fa fa-edit"></i> <span>Category</span>
+                        <i class="fa fa-edit"></i> <span>Danh mục</span>
                     </a>
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.keyword.index' ? 'active':'' }}">
@@ -238,7 +238,7 @@
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.product.index' ? 'active':'' }}">
                     <a href="{{route('admin.product.index')}}">
-                        <i class="fa fa-key"></i> <span>Product</span>
+                        <i class="fa fa-key"></i> <span>Sản phẩm</span>
                     </a>
                 </li>
                 <li class="{{ \Request::route()->getName() == 'admin.article.index' ? 'active':'' }}">
