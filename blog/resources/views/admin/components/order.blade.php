@@ -1,4 +1,4 @@
-@if($orders)
+{{--@if($orders)--}}
     <table class="table">
         <thead>
         <tr>
@@ -12,12 +12,13 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($orders as $key => $order)
+        @foreach($orders as $order)
             <tr>
                 <td>{{$loop->iteration}}</td>
                 <td><a>{{$order->name}}</a></td>
-                <td><img style="width: 80px; height: 80px" src="{{pare_url_file($order->options->avatar)}}"
-                         alt=""></td>
+                <td>
+                    <img src="" alt="">
+                </td>
                 <td>{{number_format($order->price,0,',','.')}} đ</td>
                 <td>{{$order->qty}}</td>
                 <td>{{number_format($order->qty * $order->price,0,',','.')}} đ</td>
@@ -28,4 +29,4 @@
         @endforeach
         </tbody>
     </table>
-@endif
+{{--@endif--}}

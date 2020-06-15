@@ -57,7 +57,7 @@
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <strong>Tổng tiền</strong>
-                                        <div class="pull-right"><span>{{Cart::subtotal()}}</span> <span>VNĐ</span></div>
+                                        <div class="pull-right"><span>{{Cart::subtotal(0,3)}}</span> <span>VNĐ</span></div>
                                     </div>
                                 </div>
                                 <div class="form-group">

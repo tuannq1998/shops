@@ -36,7 +36,7 @@
                 @endforeach
                 </tbody>
             </table>
-            <h2 class="pull-right">Tổng tiền cần thanh toán: {{Cart::subtotal()}} <a href="{{route('form.pay')}}" class="btn btn-success">Thanh toán</a></h2>
+            <h2 class="pull-right">Tổng tiền cần thanh toán: {{Cart::subtotal(0,3)}} <a href="{{route('form.pay')}}" class="btn btn-success">Thanh toán</a></h2>
         </div>
     </div>
 @stop

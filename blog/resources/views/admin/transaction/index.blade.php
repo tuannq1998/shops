@@ -44,8 +44,8 @@
                                 </td>
                                 <td>
                                     <a href=""
-                                       class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                                    <a class="btn btn-danger js_order_item"
+                                       class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
+                                    <a class="btn btn-xs js_order_item"
                                        href="{{route('admin.transaction.view',$transaction->id)}}"
                                        data-id="{{$transaction->id}}"><i class="fa fa-eye"></i></a>
                                 </td>
@@ -69,7 +69,10 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Chi tiết mã đơn hàng #<b class="transaction_id"></b></h4>
                 </div>
-                <div class="modal-body" id="md_content">
+                <div class="modal-body">
+                    <div class="content">
+
+                    </div>
 
                 </div>
                 <div class="modal-footer">
@@ -86,19 +89,18 @@
             $(".js_order_item").click(function (event) {
                 event.preventDefault();
                 let $this = $(this);
-                let url = $this.attr('href');
-                $(".transaction_id").text('').text($this.attr('data-id'));
-
-                $('#myModalOrder').modal('show');
-
+                let URL = $this.attr('href');
                 $.ajax({
-                    url: url,
-                }).done(function (result) {
-                    console.log(result);
-                    if (result) {
-                        $('#md_content').html('').append(result);
-                    }
-                })
+                    url:URL
+                }).done(function (results) {
+                    console.log( results);
+                    $("#myModalOrder .content").html(results.html);
+                    $('#myModalOrder').modal({
+                        show: true
+                    });
+                });
+
+                $(".transaction_id").text('').text($this.attr('data-id'));
             });
         })
     </script>

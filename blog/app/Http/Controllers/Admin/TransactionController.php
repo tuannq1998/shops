@@ -25,8 +25,10 @@ class TransactionController extends Controller
         {
             $orders = Order::where('transaction_id', $id)->get();
 
-            $html = view('components.order', compact('orders'))->render();
-            return response()->json($html);
+            $html = view("admin.components.order", compact('orders'))->render();
+            return response([
+                'html'=>$html
+            ]);
         }
     }
 }
