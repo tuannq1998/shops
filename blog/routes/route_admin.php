@@ -61,6 +61,7 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
     //ql đơn hàng
     Route::group(['prefix' => 'transaction'], function () {
         Route::get('', 'TransactionController@index')->name('admin.transaction.index');
+        Route::get('/view/{id}', 'TransactionController@viewOrder')->name('admin.transaction.view');
     });
     //ql thành viên
     Route::group(['prefix' => 'user'], function () {

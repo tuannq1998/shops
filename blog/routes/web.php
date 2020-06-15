@@ -29,10 +29,12 @@ Route::group(['namespace' => 'Frontend'], function (){
     Route::get('san-pham/{slug}-{id}','ProductDetailController@ProductDetail')->name('frontend.product.detail');
     Route::prefix('shopping')->group(function (){
        Route::get('/add/{id}','ShoppingCartController@addProduct')->name('add.shopping.cart');
+       Route::get('/delete/{id}','ShoppingCartController@deleteProduct')->name('delete.shopping.cart');
        Route::get('/danh-sach','ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
     });
     Route::group(['prefix'=>'gio-hang', 'middleware'=>'CheckLoginUser'], function (){
         Route::get('/thanh-toan','ShoppingCartController@formPay')->name('form.pay');
+        Route::post('/thanh-toan','ShoppingCartController@saveInfoShoppingCart');
     });
     Route::get('lien-he', 'ContactController@getContact')->name('get.contact');
     Route::post('lien-he', 'ContactController@saveContact');

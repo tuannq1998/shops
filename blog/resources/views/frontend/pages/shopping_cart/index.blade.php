@@ -19,7 +19,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($products as $product)
+                @foreach($products as $key => $product)
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td><a>{{$product->name}}</a></td>
@@ -30,7 +30,7 @@
                         <td>{{number_format($product->qty * $product->price,0,',','.')}} đ</td>
                         <td>
                             <a href="" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                            <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                            <a href="{{route('delete.shopping.cart', $key)}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 @endforeach
