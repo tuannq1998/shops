@@ -14,7 +14,7 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::group(['namespace'=>'Auth', 'prefix'=>'account'], function (){
+Route::group(['namespace' => 'Auth', 'prefix' => 'account'], function () {
     Route::get('dang-ky', 'RegisterController@getFormRegister')->name('get.register');
     Route::post('dang-ky', 'RegisterController@postFormRegister');
 
@@ -23,22 +23,27 @@ Route::group(['namespace'=>'Auth', 'prefix'=>'account'], function (){
 
     Route::get('dang-xuat', 'LoginController@getLogout')->name('get.Logout');
 });
-Route::group(['namespace' => 'Frontend'], function (){
-    Route::get('','HomeController@index')->name('get.home');
-    Route::get('danh-muc/{slug}-{id}','CategoryController@listProduct')->name('frontend.list.product');
-    Route::get('san-pham/{slug}-{id}','ProductDetailController@ProductDetail')->name('frontend.product.detail');
-    Route::prefix('shopping')->group(function (){
-       Route::get('/add/{id}','ShoppingCartController@addProduct')->name('add.shopping.cart');
-       Route::get('/delete/{id}','ShoppingCartController@deleteProduct')->name('delete.shopping.cart');
-       Route::get('/danh-sach','ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
+
+Route::group(['namespace' => 'Frontend'], function () {
+    Route::get('', 'HomeController@index')->name('get.home');
+    Route::get('danh-muc/{slug}-{id}', 'CategoryController@listProduct')->name('frontend.list.product');
+    Route::get('san-pham/{slug}-{id}', 'ProductDetailController@ProductDetail')->name('frontend.product.detail');
+
+    Route::prefix('shopping')->group(function () {
+        Route::get('/add/{id}', 'ShoppingCartController@addProduct')->name('add.shopping.cart');
+        Route::get('/delete/{id}', 'ShoppingCartController@deleteProduct')->name('delete.shopping.cart');
+        Route::get('/danh-sach', 'ShoppingCartController@listShoppingCart')->name('list.shopping.cart');
     });
-    Route::group(['prefix'=>'gio-hang', 'middleware'=>'CheckLoginUser'], function (){
-        Route::get('/thanh-toan','ShoppingCartController@formPay')->name('form.pay');
-        Route::post('/thanh-toan','ShoppingCartController@saveInfoShoppingCart');
+
+    Route::group(['prefix' => 'gio-hang', 'middleware' => 'CheckLoginUser'], function () {
+        Route::get('/thanh-toan', 'ShoppingCartController@formPay')->name('form.pay');
+        Route::post('/thanh-toan', 'ShoppingCartController@saveInfoShoppingCart');
     });
+
     Route::get('lien-he', 'ContactController@getContact')->name('get.contact');
     Route::post('lien-he', 'ContactController@saveContact');
 });
+
 include 'route_admin.php';
 
 //Auth::routes();

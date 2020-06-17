@@ -14,11 +14,12 @@ class ProductDetailController extends Controller
         $url = preg_split('/(-)/i', $url);
         if($id = array_pop($url))
         {
-            $productDetail = Product::where('active', Product::STATUS_SHOWS)->find($id);
+            $product = Product::findOrFail($id);
             $viewData =[
-                'productDetail'=>$productDetail
+                'product'=>$product
             ];
-            return view('frontend.pages.product_detail.index');
+            return view('frontend.pages.product_detail.index', $viewData);
         }
+        return redirect()->to('/');
     }
 }

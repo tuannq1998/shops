@@ -36,18 +36,16 @@
                                 <td>{{$transaction->phone}}</td>
                                 <td>{{number_format($transaction->total,0,',','.')}} VNĐ</td>
                                 <td>
-                                    @if($transaction->status == 1)
-                                        <a href="" class="label-success label">Đã xử lý</a>
-                                    @else
-                                        <a href="" class="label-default label">Chờ xử lý</a>
-                                    @endif
+                                    <span class="label label-{{$transaction->getStatus($transaction->status)['class']}}">
+                                        {{$transaction->getStatus($transaction->status)['name']}}
+                                    </span>
                                 </td>
                                 <td>
-                                    <a href=""
-                                       class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
                                     <a class="btn btn-xs js_order_item"
                                        href="{{route('admin.transaction.view',$transaction->id)}}"
                                        data-id="{{$transaction->id}}"><i class="fa fa-eye"></i></a>
+                                    <a href="{{route('admin.transaction.delete', $transaction->id)}}"
+                                       class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                         @endforeach
@@ -91,9 +89,8 @@
                 let $this = $(this);
                 let URL = $this.attr('href');
                 $.ajax({
-                    url:URL
+                    url: URL
                 }).done(function (results) {
-                    console.log( results);
                     $("#myModalOrder .content").html(results.html);
                     $('#myModalOrder').modal({
                         show: true
@@ -102,6 +99,20 @@
 
                 $(".transaction_id").text('').text($this.attr('data-id'));
             });
+
+            $('body').on("click", '.js-delete-order-item', function (event) {
+                event.preventDefault();
+                let URL = $(this).attr('href');
+                let $this = $(this);
+
+                $.ajax({
+                    url: URL
+                }).done(function (results) {
+                    if (results.code == 200) {
+                        $this.parents("tr").remove();
+                    }
+                });
+            })
         })
     </script>
 @stop

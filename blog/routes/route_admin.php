@@ -20,6 +20,7 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
         Route::get('delete/{id}', 'AdminCategoryController@destroy')->name('admin.category.delete');
 
     });
+
     Route::group(['prefix' => 'keyword'], function () {
         Route::get('', 'AdminKeywordController@index')->name('admin.keyword.index');
         Route::get('create', 'AdminKeywordController@create')->name('admin.keyword.create');
@@ -32,6 +33,7 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
         Route::get('delete/{id}', 'AdminKeywordController@destroy')->name('admin.keyword.delete');
 
     });
+
     Route::group(['prefix' => 'product'], function () {
         Route::get('', 'AdminProductController@index')->name('admin.product.index');
         Route::get('create', 'AdminProductController@create')->name('admin.product.create');
@@ -45,6 +47,7 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
         Route::get('delete/{id}', 'AdminProductController@destroy')->name('admin.product.delete');
 
     });
+
     Route::group(['prefix' => 'article'], function () {
         Route::get('', 'ArticleController@index')->name('admin.article.index');
         Route::get('create', 'ArticleController@create')->name('admin.article.create');
@@ -58,11 +61,15 @@ Route::group(['prefix' => 'api-admin', 'namespace' => 'Admin'], function () {
         Route::get('delete/{id}', 'ArticleController@destroy')->name('admin.article.delete');
 
     });
+
     //ql đơn hàng
     Route::group(['prefix' => 'transaction'], function () {
         Route::get('', 'TransactionController@index')->name('admin.transaction.index');
-        Route::get('/view/{id}', 'TransactionController@viewOrder')->name('admin.transaction.view');
+        Route::get('/view-transaction/{id}', 'TransactionController@viewOrder')->name('admin.transaction.view');
+        Route::get('/delete-transaction/{id}', 'TransactionController@delete')->name('admin.transaction.delete');
+        Route::get('/order-delete/{id}', 'TransactionController@deleteOrderItem')->name('admin.transaction.delete.order_item');
     });
+
     //ql thành viên
     Route::group(['prefix' => 'user'], function () {
         Route::get('', 'UserController@index')->name('admin.user.index');
